@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Virginia City Farmacy</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bevan&family=Lato:wght@400;700&family=Oswald:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container flex justify-between items-center">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/virginia-city-farmacy-logo-text-only-400px.png" alt="Virginia City Farmacy"
+                        style="height: 60px;">
+                </a>
+            </div>
+
+            <nav class="desktop-nav">
+                <ul class="flex gap-lg items-center">
+                    <li><a href="menu.html" class="nav-link">Menu</a></li>
+                    <li><a href="about.html" class="nav-link" style="color: var(--color-gold);">About Us / History</a>
+                    </li>
+                    <li><a href="location.html" class="nav-link">Location & Info</a></li>
+                    <li><a href="wholesale.html" class="nav-link">Wholesale</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+                </ul>
+            </nav>
+
+            <button id="mobileMenuBtn" class="mobile-menu-btn">
+                <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                    </path>
+                </svg>
+            </button>
+        </div>
+
+        <nav id="mobileMenu" class="mobile-menu">
+            <a href="menu.html">Menu</a>
+            <a href="about.html">About Us / History</a>
+            <a href="location.html">Location & Info</a>
+            <a href="wholesale.html">Wholesale</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+    </header>
+
+    <div class="page-header text-center bg-dark section">
+        <div class="container">
+            <h1 class="text-white">About Us</h1>
+            <p class="text-white">History, Community, and Cannabis in the Old West.</p>
+        </div>
+    </div>
+
+    <!-- Our Story -->
+    <section class="section">
+        <div class="container grid grid-2 items-center">
+            <div>
+                <h2>Our Story</h2>
+                <p>Virginia City Farmacy was born from a desire to bring modern, high-quality cannabis to one of
+                    Montana's most historic towns. We saw an opportunity to blend the rich history of the gold rush era
+                    with the new frontier of legal cannabis.</p>
+                <p>Our founders care deeply about preserving the character of Virginia City while
+                    providing a valuable service to residents and visitors alike.</p>
+            </div>
+            <div>
+                <img src="images/founders.jpg" alt="Founders"
+                    style="border-radius: var(--radius-md); box-shadow: var(--shadow-card);">
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Values -->
+    <section class="section bg-light">
+        <div class="container text-center">
+            <h2 style="margin-bottom: 3rem;">Mission & Values</h2>
+            <div class="grid grid-3">
+                <div class="card">
+                    <h3>Quality</h3>
+                    <p>We are committed to sourcing only the cleanest, most potent cannabis products in Montana. Safety
+                        and quality are our top priorities.</p>
+                </div>
+                <div class="card">
+                    <h3>Community</h3>
+                    <p>We believe in giving back to the community that supports us. We are proud to be part of the
+                        fabric of Virginia City.</p>
+                </div>
+                <div class="card">
+                    <h3>Education</h3>
+                    <p>We strive to educate our customers about the benefits and safe use of cannabis, empowering them
+                        to make informed choices.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Location & Building -->
+    <section class="section">
+        <div class="container">
+            <div class="text-center" style="margin-bottom: 3rem;">
+                <h2>Our Historic Location</h2>
+                <p>Housed in a building that dates back to the 1860s, our dispensary offers a glimpse into the past.</p>
+            </div>
+
+            <div class="grid grid-2 gap-lg">
+                <img src="images/building-exterior.jpg" alt="Historic Building Exterior"
+                    style="width: 100%; height: 300px; object-fit: cover; border-radius: var(--radius-md);">
+                <img src="images/building-interior.jpg" alt="Historic Building Interior"
+                    style="width: 100%; height: 300px; object-fit: cover; border-radius: var(--radius-md);">
+            </div>
+
+            <div style="margin-top: 2rem;">
+                <p>The building has been carefully restored to preserve its original charm, featuring original brickwork
+                    and period-correct details. When you step inside, you're stepping into history.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Virginia City Background -->
+    <section class="section bg-dark text-white">
+        <div class="container">
+            <div class="grid grid-2 items-center">
+                <div>
+                    <img src="images/virginia-city-history.jpg" alt="Virginia City History"
+                        style="border-radius: var(--radius-md); border: 2px solid var(--color-gold);">
+                </div>
+                <div>
+                    <h2 class="text-white">Virginia City History</h2>
+                    <p>Virginia City is a town frozen in time. Founded in 1863 during the Alder Gulch Gold Rush, it
+                        served as the territorial capital of Montana for a decade.</p>
+                    <p>Today, it stands as a National Historic Landmark, with over 100 historic buildings preserved in
+                        their original state. Visitors can ride the stagecoach, pan for gold, and experience the Wild
+                        West just as it was over 150 years ago.</p>
+                    <p>Beyond the history, the area offers incredible outdoor recreation, including blue-ribbon trout
+                        fishing in the Madison River and endless hiking trails in the surrounding mountains.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="grid grid-3">
+                <div>
+                    <h4>Contact Us</h4>
+                    <p>120 W Wallace St<br>Virginia City, MT 59755<br>(406) 843-5688<br>info@vcfarmacy.com</p>
+                </div>
+                <div>
+                    <h4>Hours</h4>
+                    <p>Sunday • Monday • Wednesday • Friday • Saturday<br>10am - 5pm<br>Closed Tuesday & Thursday</p>
+                </div>
+                <div>
+                    <h4>Follow Us</h4>
+                    <div class="flex gap-md">
+                        <a href="https://www.instagram.com/virginiacityfarmacy/" target="_blank">Instagram</a>
+                        <a href="https://www.facebook.com/Virginiacityfarmacy" target="_blank">Facebook</a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center"
+                style="margin-top: 3rem; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1rem;">
+                <p class="text-sm" style="color: #999;">&copy; 2024 Virginia City Farmacy. All rights reserved. Must be
+                    21+ to view. License #123456.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

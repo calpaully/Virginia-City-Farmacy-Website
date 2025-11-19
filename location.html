@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Location & Info - Virginia City Farmacy</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bevan&family=Lato:wght@400;700&family=Oswald:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container flex justify-between items-center">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/virginia-city-farmacy-logo-text-only-400px.png" alt="Virginia City Farmacy" style="height: 60px;">
+                </a>
+            </div>
+
+            <nav class="desktop-nav">
+                <ul class="flex gap-lg items-center">
+                    <li><a href="menu.html" class="nav-link">Menu</a></li>
+                    <li><a href="about.html" class="nav-link">About Us / History</a></li>
+                    <li><a href="location.html" class="nav-link" style="color: var(--color-gold);">Location & Info</a>
+                    </li>
+                    <li><a href="wholesale.html" class="nav-link">Wholesale</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+                </ul>
+            </nav>
+
+            <button id="mobileMenuBtn" class="mobile-menu-btn">
+                <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                    </path>
+                </svg>
+            </button>
+        </div>
+
+        <nav id="mobileMenu" class="mobile-menu">
+            <a href="menu.html">Menu</a>
+            <a href="about.html">About Us / History</a>
+            <a href="location.html">Location & Info</a>
+            <a href="wholesale.html">Wholesale</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+    </header>
+
+    <div class="page-header text-center bg-dark section">
+        <div class="container">
+            <h1 class="text-white">Location & Visitor Info</h1>
+            <p class="text-white">Find us in the heart of historic Virginia City.</p>
+        </div>
+    </div>
+
+    <!-- Map & Directions -->
+    <section class="section">
+        <div class="container grid grid-2 gap-lg">
+            <div>
+                <h2>How to Find Us</h2>
+                <div class="flex items-center gap-md" style="margin-bottom: 1rem;">
+                    <a href="https://maps.app.goo.gl/wac6x21FMPVgdXs39" class="btn" target="_blank">Open in Google Maps</a>
+                    <div>
+                        <strong>Address:</strong><br>120 W Wallace St<br>Virginia City, MT 59755
+                    </div>
+                </div>
+                <p>We are located right on the main boardwalk, across from the historic Opera House.</p>
+
+                <h3 style="margin-top: 2rem;">Hours</h3>
+                <p><strong>Sunday • Monday • Wednesday • Friday • Saturday</strong><br>10am - 5pm<br>Closed Tuesday & Thursday</p>
+
+                <h3 style="margin-top: 2rem;">Parking & Access</h3>
+                <p>There is plenty of street parking available throughout historic Virginia City. During peak summer
+                    months, additional parking is available in the public lots at either end of town.</p>
+            </div>
+            <div>
+                <!-- Google Maps Embed Placeholder -->
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2857.3686873287!2d-111.9467!3d45.2938!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x535a3b8e0a0a0a0a%3A0x0!2sVirginia%20City%20Farmacy!5e0!3m2!1sen!2sus!4v1620000000000!5m2!1sen!2sus"
+                    width="100%" height="450"
+                    style="border:0; border-radius: var(--radius-md); box-shadow: var(--shadow-card);"
+                    allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- What to Bring -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="text-center" style="margin-bottom: 3rem;">
+                <h2>Know Before You Come</h2>
+            </div>
+            <div class="grid grid-3">
+                <div class="card">
+                    <div class="icon-box">🆔</div>
+                    <h3>ID Required</h3>
+                    <p>You must have a valid government-issued ID proving you are 21+ (recreational) or a valid Montana
+                        medical card.</p>
+                </div>
+                <div class="card">
+                    <div class="icon-box">💵</div>
+                    <h3>Cash Only</h3>
+                    <p>We currently accept cash only. For your convenience, there is an ATM located on-site.</p>
+                </div>
+                <div class="card">
+                    <div class="icon-box">🚫</div>
+                    <h3>On-Site Rules</h3>
+                    <p>Consumption of cannabis products on the premises is strictly prohibited by law. Please respect
+                        our neighbors and our town.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="grid grid-3">
+                <div>
+                    <h4>Contact Us</h4>
+                    <p>120 W Wallace St<br>Virginia City, MT 59755<br>(406) 843-5688<br>info@vcfarmacy.com</p>
+                </div>
+                <div>
+                    <h4>Hours</h4>
+                    <p>Sunday • Monday • Wednesday • Friday • Saturday<br>10am - 5pm<br>Closed Tuesday & Thursday</p>
+                </div>
+                <div>
+                    <h4>Follow Us</h4>
+                    <div class="flex gap-md">
+                        <a href="https://www.instagram.com/virginiacityfarmacy/" target="_blank">Instagram</a>
+                        <a href="https://www.facebook.com/Virginiacityfarmacy" target="_blank">Facebook</a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center"
+                style="margin-top: 3rem; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1rem;">
+                <p class="text-sm" style="color: #999;">&copy; 2024 Virginia City Farmacy. All rights reserved. Must be
+                    21+ to view. License #123456.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Virginia City Farmacy - Premium cannabis in the heart of Virginia City, Montana. New Vibes in the Old West.">
+    <meta name="keywords" content="cannabis, dispensary, Virginia City, Montana, marijuana, edibles, flower">
+    <title>Virginia City Farmacy - Premium Cannabis</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bevan&family=Lato:wght@400;700&family=Oswald:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Age Verification Pop Up -->
+    <div id="ageGateOverlay" class="age-gate-overlay">
+        <div class="age-gate-content">
+            <div class="age-gate-logo">
+                <!-- Placeholder for small logo -->
+                <img src="images/virginia-city-farmacy-logo-text-only-400px.png" alt="Virginia City Farmacy Logo">
+            </div>
+            <h2>Are you 21 or older?</h2>
+            <button id="ageGateBtn" class="btn">Yes, I'm 21!</button>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container flex justify-between items-center">
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/virginia-city-farmacy-logo-text-only-400px.png" alt="Virginia City Farmacy"
+                        style="height: 60px;">
+                </a>
+            </div>
+
+            <!-- Desktop Navigation -->
+            <nav class="desktop-nav">
+                <ul class="flex gap-lg items-center">
+                    <li><a href="menu.html" class="nav-link">Menu</a></li>
+                    <li><a href="about.html" class="nav-link">About Us / History</a></li>
+                    <li><a href="location.html" class="nav-link">Location & Info</a></li>
+                    <li><a href="wholesale.html" class="nav-link">Wholesale</a></li>
+                    <li><a href="contact.html" class="nav-link">Contact Us</a></li>
+                    <li class="flex gap-md">
+                        <a href="https://www.instagram.com/virginiacityfarmacy/" target="_blank" aria-label="Instagram">
+                            <svg class="social-icon" viewBox="0 0 24 24">
+                                <path
+                                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                            </svg>
+                        </a>
+                        <a href="https://www.facebook.com/Virginiacityfarmacy" target="_blank" aria-label="Facebook">
+                            <svg class="social-icon" viewBox="0 0 24 24">
+                                <path
+                                    d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- Mobile Menu Button -->
+            <button id="mobileMenuBtn" class="mobile-menu-btn">
+                <svg width="32" height="32" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                    </path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation -->
+        <nav id="mobileMenu" class="mobile-menu">
+            <a href="menu.html">Menu</a>
+            <a href="about.html">About Us / History</a>
+            <a href="location.html">Location & Info</a>
+            <a href="wholesale.html">Wholesale</a>
+            <a href="contact.html">Contact Us</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-slider">
+            <div class="hero-slide active" style="background-image: url('images/slider1-dark.jpg');"></div>
+            <div class="hero-slide" style="background-image: url('images/slider2-dark.jpg');"></div>
+            <div class="hero-slide" style="background-image: url('images/slider3-dark.jpg');"></div>
+        </div>
+
+        <!--<div class="film-overlay"></div>-->
+
+        <div class="western-hero-container">
+            <h1 class="western-text">
+                <span class="line line-1">New Vibes</span>
+                <span class="line line-2">IN THE</span>
+                <span class="line line-3">Old West</span>
+            </h1>
+            <p class="western-subhead">
+                Premium cannabis in the heart of
+                <span class="location-line">Virginia City, Montana</span>
+            </p>
+            
+            <a href="menu.html" class="western-btn">VIEW MENU</a>
+        </div>
+    </section>
+
+    <!-- Featured Quick Info -->
+    <section class="section wood-background">
+        <div class="container">
+            <div class="grid grid-4">
+                <div class="card fancy-border">
+                                        <div class="icon-box">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-map-pin"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                    </div>
+                    <h4>Location & Hours</h4>
+                    <p>Historic Virginia City<br>Sun, Mon, Wed, Fri, Sat<br>10am - 5pm</p>
+                </div>
+                <div class="card fancy-border">
+                                        <div class="icon-box">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus-square"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg>
+                    </div>
+                    <h4>Medical & Rec</h4>
+                    <p>Serving both medical patients and recreational customers (21+).</p>
+                </div>
+                <div class="card fancy-border">
+                                        <div class="icon-box">
+                        <svg width="48" height="48" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
+	 viewBox="0 0 499.8 499.8" xml:space="preserve" stroke="currentColor" fill="none" stroke-width="20">
+<path id="XMLID_277_" d="M477.16,292.045c0,0-62.848-4.221-125.061,22.069c11.664-13.634,23.084-28.804,33.416-45.603
+	c51.428-83.723,56.047-174.385,56.047-174.385s-78.774,45.1-130.221,128.822c-7.563,12.3-13.99,24.738-19.668,37.029
+	c3.467-20.557,5.744-42.617,5.744-65.72C297.417,86.977,249.892,0,249.892,0s-47.506,86.977-47.506,194.259
+	c0,23.102,2.279,45.163,5.742,65.713c-5.68-12.293-12.123-24.723-19.67-37.023C137.017,139.227,58.238,94.127,58.238,94.127
+	s4.623,90.662,56.05,174.385c10.329,16.799,21.75,31.969,33.416,45.603C85.472,287.824,22.64,292.045,22.64,292.045
+	s37.99,47.329,100.418,73.905c23.818,10.137,47.734,15.764,68.231,18.881c-9.681,0.716-19.997,2.132-30.503,4.71
+	c-45.443,11.111-77.006,38.909-77.006,38.909s42.105,9.768,87.561-1.351c29.467-7.217,52.928-21.347,65.893-30.448l-10.852,86.821
+	c-0.506,4.125,0.635,8.272,3.157,11.404c2.522,3.125,6.147,4.923,9.974,4.923h20.791c3.826,0,7.451-1.798,9.975-4.923
+	c2.522-3.132,3.66-7.279,3.156-11.404l-10.852-86.814c12.967,9.103,36.426,23.225,65.875,30.441
+	c45.457,11.118,87.561,1.351,87.561,1.351s-31.564-27.798-77.002-38.909c-10.512-2.578-20.828-3.994-30.508-4.71
+	c20.504-3.117,44.42-8.744,68.238-18.881C439.173,339.374,477.16,292.045,477.16,292.045z"/>
+</svg>
+                    </div>
+                    <h4>Premium Products</h4>
+                    <p>Flower, Edibles, Concentrates, and more.</p>
+                </div>
+                <div class="card fancy-border">
+                                        <div class="icon-box">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-smile"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>
+                    </div>
+                    <h4>Daily Specials</h4>
+                    <p>Check out our daily deals and loyalty rewards program.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What Makes Us Unique -->
+    <section class="section">
+        <div class="container">
+            <div class="text-center" style="margin-bottom: 3rem;">
+                <img src="images/virginia-city-farmacy-logo-800px_nobg.png" alt="Virginia City Farmacy Logo" style="display: block; margin: 0 auto 2rem; max-width: 300px;">
+                <h2>Why Choose Us</h2>
+                <p style="line-height: 1.6; max-width: 800px; margin: 1rem auto 0;">
+                    <span style="font-family: var(--font-subheading); font-size: 1.75rem; font-weight: 700; text-transform: none; color: var(--color-dark-grey); display: block;">Virginia City Farmacy is your local, trusted source for high-quality cannabis products in the heart
+                    of historic Virginia City, Montana. We are dedicated to providing a curated selection of flower,
+                    edibles, concentrates, and more, serving both medical and recreational customers (21+). Our
+                    knowledgeable and friendly staff are here to help you find the perfect product to suit your needs,
+                    whether you're a seasoned connoisseur or new to cannabis. Come visit us for a unique and comfortable
+                    shopping experience.</span>
+                </p>
+            </div>
+            <div class="grid grid-3">
+                <div class="text-center fancy-border">
+                    <h3>Historic Atmosphere</h3>
+                    <p>Located in a beautifully preserved historic building, offering a unique old west experience.</p>
+                </div>
+                <div class="text-center fancy-border">
+                    <h3>Community Focused</h3>
+                    <p>We are locally owned and deeply committed to the Virginia City community.</p>
+                </div>
+                <div class="text-center fancy-border">
+                    <h3>Curated Quality</h3>
+                    <p>We hand-select the finest cannabis products from across Montana.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cutthroat Edibles -->
+    <section class="section text-center cutthroat-section">
+        <div class="container">
+            <img src="images/cutthroat-edibles-logo-600.png" alt="Cutthroat Edibles Logo" style="display: block; max-width: 300px; margin: 0 auto 2rem;">
+            <h2>Exclusive Edibles</h2>
+            <p class="text-white">Try our signature line of delicious, high-quality edibles.</p>
+            <a href="menu.html" class="btn" style="background: white; color: black;">Shop Edibles</a>
+        </div>
+    </section>
+
+    <!-- Explore Virginia City -->
+    <section class="section">
+        <div class="container grid grid-2 items-center">
+            <div>
+                <h2>Explore Virginia City</h2>
+                <p>Step back in time in one of the best-preserved gold rush towns in the West. From the boardwalks to
+                    the boot hill, Virginia City is a living history museum.</p>
+                <p>Make your stop at the Farmacy part of your full Virginia City experience.</p>
+                <a href="about.html" class="btn">Learn More About Us</a>
+            </div>
+            <div>
+                <img src="images/virginia-city-street.jpg" alt="Virginia City Street"
+                    style="border-radius: var(--radius-md); box-shadow: var(--shadow-card);">
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="section bg-light">
+        <div class="container">
+            <div class="text-center" style="margin-bottom: 3rem;">
+                <h2>Customer Reviews</h2>
+            </div>
+            <div class="testimonial-slider">
+                <div class="testimonial-slide active">
+                    <div class="card">
+                        <p style="font-style: italic; font-size: 1.2rem;">"Best dispensary in Montana! The staff is
+                            incredibly knowledgeable and the atmosphere is unmatched."</p>
+                        <p class="font-bold" style="margin-top: 1rem;">- Sarah J.</p>
+                    </div>
+                </div>
+                <div class="testimonial-slide">
+                    <div class="card">
+                        <p style="font-style: italic; font-size: 1.2rem;">"Love the old west vibe. Great selection of
+                            flower and edibles. A must-visit in Virginia City."</p>
+                        <p class="font-bold" style="margin-top: 1rem;">- Mike T.</p>
+                    </div>
+                </div>
+                <div class="testimonial-slide">
+                    <div class="card">
+                        <p style="font-style: italic; font-size: 1.2rem;">"Friendly service and great prices. The
+                            Cutthroat Edibles are amazing!"</p>
+                        <p class="font-bold" style="margin-top: 1rem;">- Emily R.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="grid grid-3">
+                <div>
+                    <h4>Contact Us</h4>
+                    <p>120 W Wallace St<br>Virginia City, MT 59755<br>(406) 843-5688<br>info@vcfarmacy.com</p>
+                </div>
+                <div>
+                    <h4>Hours</h4>
+                    <p>Sunday • Monday • Wednesday • Friday • Saturday<br>10am - 5pm<br>Closed Tuesday & Thursday</p>
+                </div>
+                <div>
+                    <h4>Follow Us</h4>
+                    <div class="flex gap-md">
+                        <a href="https://www.instagram.com/virginiacityfarmacy/" target="_blank">Instagram</a>
+                        <a href="https://www.facebook.com/Virginiacityfarmacy" target="_blank">Facebook</a>
+                    </div>
+                </div>
+            </div>
+            <div class="text-center"
+                style="margin-top: 3rem; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1rem;">
+                <p class="text-sm" style="color: #999;">&copy; 2024 Virginia City Farmacy. All rights reserved. Must be
+                    21+ to view. License #123456.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

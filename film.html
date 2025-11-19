@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Old Film Effect Hero</title>
+    <style>
+        /* --- RESET & BASICS --- */
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Courier New', Courier, monospace; background: #000; color: #fff; }
+
+        /* --- HERO CONTAINER --- */
+        .hero {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #111;
+        }
+
+        /* --- SLIDESHOW LAYER (Bottom) --- */
+        .slideshow {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        /* Demo Slides: Using CSS gradients to simulate images so this file works instantly */
+        .slide {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            animation: crossfade 12s infinite;
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Simulating 3 different images */
+        .slide:nth-child(1) { 
+            background: linear-gradient(45deg, #4a3b3b, #2c2424); 
+            animation-delay: 0s; 
+        }
+        .slide:nth-child(2) { 
+            background: linear-gradient(45deg, #243b55, #141e30); 
+            animation-delay: 4s; 
+        }
+        .slide:nth-child(3) { 
+            background: linear-gradient(45deg, #1d4350, #a43931); 
+            animation-delay: 8s; 
+        }
+
+        /* --- OLD FILM OVERLAY (Middle) --- */
+        .film-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 2; /* Above slides, below text */
+            pointer-events: none; /* CRITICAL: Lets clicks pass through to buttons */
+            background: transparent;
+        }
+
+        /* The Grain (Noise) */
+        .film-overlay::after {
+            content: "";
+            position: absolute;
+            top: -100%;
+            left: -50%;
+            width: 300%;
+            height: 300%;
+            /* Lightweight embedded SVG noise */
+            background-image: url('data:image/svg+xml;utf8,%3Csvg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="noiseFilter"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/%3E%3C/filter%3E%3Crect width="100%25" height="100%25" filter="url(%23noiseFilter)" opacity="1"/%3E%3C/svg%3E');
+            opacity: 0.45; 
+            animation: grain 8s steps(10) infinite;
+        }
+
+        /* The Scratches & Vignette */
+        .film-overlay::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* Vertical scratch lines */
+            background: repeating-linear-gradient(
+                90deg,
+                transparent 0,
+                transparent 2px,
+                rgba(255, 255, 255, 0.1) 3px,
+                transparent 4px
+            );
+            /* Vignette (dark corners) */
+            box-shadow: inset 0 0 200px rgba(0,0,0,0.9); 
+            opacity: 0.3;
+            animation: flicker 4s infinite;
+        }
+
+        /* --- CONTENT LAYER (Top) --- */
+        .hero-content {
+            position: relative;
+            z-index: 3;
+            text-align: center;
+            padding: 20px;
+            /* Optional: subtle text shadow for readability over noisy background */
+            text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+        }
+
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        button {
+            padding: 12px 30px;
+            font-size: 1rem;
+            background-color: #fff;
+            color: #000;
+            border: none;
+            cursor: pointer;
+            text-transform: uppercase;
+            font-weight: bold;
+            letter-spacing: 1px;
+            transition: background 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #ccc;
+        }
+
+        /* --- ANIMATIONS --- */
+        @keyframes crossfade {
+            0% { opacity: 0; }
+            10% { opacity: 1; }
+            33% { opacity: 1; }
+            43% { opacity: 0; }
+            100% { opacity: 0; }
+        }
+
+        @keyframes grain {
+            0%, 100% { transform: translate(0, 0); }
+            10% { transform: translate(-5%, -10%); }
+            20% { transform: translate(-15%, 5%); }
+            30% { transform: translate(5%, -25%); }
+            40% { transform: translate(-5%, 25%); }
+            50% { transform: translate(-15%, 10%); }
+            60% { transform: translate(15%, 0%); }
+            70% { transform: translate(0%, 15%); }
+            80% { transform: translate(3%, 35%); }
+            90% { transform: translate(-10%, 10%); }
+        }
+
+        @keyframes flicker {
+            0% { opacity: 0.3; transform: translateX(0px); }
+            5% { opacity: 0.1; transform: translateX(40px); }
+            10% { opacity: 0.3; transform: translateX(10px); }
+            15% { opacity: 0.4; transform: translateX(80px); }
+            30% { opacity: 0.2; transform: translateX(5px); }
+            50% { opacity: 0.3; transform: translateX(90px); }
+            80% { opacity: 0.1; transform: translateX(20px); }
+            100% { opacity: 0.3; transform: translateX(0px); }
+        }
+    </style>
+</head>
+<body>
+
+    <section class="hero">
+        
+        <div class="slideshow">
+            <div class="slide"></div>
+            <div class="slide"></div>
+            <div class="slide"></div>
+        </div>
+
+        <div class="film-overlay"></div>
+
+        <div class="hero-content">
+            <h1>Vintage Cinema</h1>
+            <p>A lightweight pure CSS overlay effect</p>
+            <button onclick="alert('Button clicked! Pointer-events are working.')">Watch Now</button>
+        </div>
+
+    </section>
+
+</body>
+</html>
