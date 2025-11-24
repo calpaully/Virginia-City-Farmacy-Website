@@ -287,6 +287,7 @@ p {
     box-shadow: var(--shadow-solid);
     transition: transform var(--transition-fast), box-shadow var(--transition-fast);
     border: 2px solid var(--color-black);
+    text-decoration: none;
 }
 
 .btn:hover {
@@ -315,10 +316,14 @@ p {
     text-transform: uppercase;
     color: var(--color-dark-grey);
     font-size: 1.1rem;
+    text-decoration: none;
+    /* Remove default underline */
 }
 
 .nav-link:hover {
     color: var(--color-gold);
+    text-decoration: underline;
+    /* Add underline on hover */
 }
 
 .social-icon {
@@ -510,19 +515,35 @@ p {
 
     .mobile-menu {
         display: none;
-        background: var(--color-white);
-        padding: var(--spacing-md);
-        border-bottom: 2px solid var(--color-gold);
+        position: fixed;
+        inset: 0;
+        background: rgba(255, 255, 255, 0.95);
+        z-index: 9999;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 2rem;
+        transition: opacity 0.3s ease;
     }
 
     .mobile-menu.active {
-        display: block;
+        display: flex;
     }
 
     .mobile-menu a {
         display: block;
-        padding: var(--spacing-sm) 0;
-        border-bottom: 1px solid var(--color-light-grey);
+        padding: 1rem;
+        border-bottom: none;
+        font-family: var(--font-subheading);
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        color: var(--color-black);
+        text-decoration: none;
+        text-align: center;
+    }
+
+    .mobile-menu a:hover {
+        color: var(--color-gold);
     }
 }
 
@@ -575,6 +596,37 @@ p {
     filter: grayscale(100%);
     opacity: 0.15;
     z-index: -1;
+}
+
+/* Page Header Backgrounds */
+.page-header-bg {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    color: var(--color-white);
+    z-index: 1;
+}
+
+.page-header-bg::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    /* Dark overlay for readability */
+    z-index: -1;
+}
+
+.page-header-bg h1,
+.page-header-bg p {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.page-header-bg p {
+    font-family: var(--font-subheading);
+    /* Oswald */
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
 }
 
 /* ========================================
@@ -849,6 +901,11 @@ p {
 }
 
 @media (max-width: 768px) {
+    .hero {
+        min-height: 60vh;
+        padding: 2rem 0;
+    }
+
     .western-text {
         font-size: clamp(2.5rem, 12vw, 5rem);
     }
@@ -931,6 +988,35 @@ p {
     flex-wrap: wrap;
     gap: 8px;
     margin-top: 1rem;
+}
+
+.hours-container.vertical {
+    flex-direction: column;
+    width: max-content;
+    margin: 0 auto;
+    gap: 8px;
+}
+
+.day-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.day-label {
+    font-family: var(--font-subheading);
+    font-size: 0.95rem;
+    color: var(--color-dark-grey);
+    font-weight: 500;
+    text-align: left;
+}
+
+.site-footer .day-label {
+    color: var(--color-white);
+}
+
+.site-footer .hours-container.vertical {
+    margin: 1rem 0 0 0;
 }
 
 .day-box {
@@ -1043,4 +1129,13 @@ p {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+}
+
+/* Black and Gold Map Filter */
+/* Gold Theme Map Filter */
+.map-gold-theme {
+    filter: grayscale(100%) sepia(40%) contrast(120%) brightness(115%);
+    -webkit-filter: grayscale(100%) sepia(40%) contrast(120%) brightness(115%);
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-card);
 }

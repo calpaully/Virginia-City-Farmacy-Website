@@ -4,12 +4,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-7BH90CTTKQ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-7BH90CTTKQ');
+    </script>
+
     <meta name="description"
-        content="Virginia City Farmacy - Premium cannabis in the heart of Virginia City, Montana. Good Vibes in the Old West.">
-    <meta name="keywords" content="cannabis, dispensary, Virginia City, Montana, marijuana, edibles, flower">
-    <title>Virginia City Farmacy - Premium Cannabis</title>
+        content="Experience the Old West at Virginia City Farmacy. Premium cannabis, edibles, and concentrates in historic Virginia City, Montana. Recreational (21+) & Medical.">
+    <meta name="keywords" content="Virginia City dispensary, Montana cannabis, marijuana near me, premium flower, edibles, Virginia City Farmacy">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://virginiacityfarmacy.com/">
+    <meta property="og:title" content="Virginia City Farmacy | Premium Cannabis Dispensary in Historic Virginia City, MT">
+    <meta property="og:description"
+        content="Experience the Old West at Virginia City Farmacy. Premium cannabis, edibles, and concentrates in historic Virginia City, Montana. Recreational (21+) & Medical.">
+    <meta property="og:image"
+        content="https://virginiacityfarmacy.com/images/virginia-city-farmacy-logo-800px_nobg.png">
+
+    <link rel="canonical" href="https://virginiacityfarmacy.com/">
+
+    <title>Virginia City Farmacy | Premium Cannabis Dispensary in Historic Virginia City, MT</title>
 
     <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Bevan&family=Lato:wght@400;700&family=Oswald:wght@400;700&display=swap"
@@ -77,11 +101,32 @@
 
         <!-- Mobile Navigation -->
         <nav id="mobileMenu" class="mobile-menu">
+            <button class="mobile-menu-close" style="position: absolute; top: 2rem; right: 1rem;"
+                onclick="document.getElementById('mobileMenu').classList.remove('active')">
+                <svg width="32" height="32" fill="none" stroke="black" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
+                    </path>
+                </svg>
+            </button>
             <a href="menu.html">Menu</a>
             <a href="about.html">About Us / History</a>
             <a href="location.html">Location & Info</a>
             <a href="wholesale.html">Wholesale</a>
             <a href="contact.html">Contact Us</a>
+            <div class="flex gap-md justify-center" style="margin-top: 2rem;">
+                <a href="https://www.instagram.com/virginiacityfarmacy/" target="_blank" aria-label="Instagram">
+                    <svg style="width: 32px; height: 32px; fill: black;" viewBox="0 0 24 24">
+                        <path
+                            d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+                    </svg>
+                </a>
+                <a href="https://www.facebook.com/Virginiacityfarmacy" target="_blank" aria-label="Facebook">
+                    <svg style="width: 32px; height: 32px; fill: black;" viewBox="0 0 24 24">
+                        <path
+                            d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z" />
+                    </svg>
+                </a>
+            </div>
         </nav>
     </header>
 
@@ -105,40 +150,76 @@
                 Premium cannabis in the heart of
                 <span class="location-line">Virginia City, Montana</span>
             </p>
-            <div class="card fancy-border">
-                <div class="icon-box">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="feather feather-map-pin">
-                        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                        <circle cx="12" cy="10" r="3"></circle>
-                    </svg>
+            <a href="menu.html" class="western-btn">View Menu</a>
+        </div>
+
+    </section>
+
+    <!-- What Makes Us Unique -->
+    <section class="section wood-background">
+        <div class="container">
+            <div class="grid grid-4">
+                <div class="card fancy-border">
+                    <div class="icon-box">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="feather feather-clock">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polyline points="12 6 12 12 16 14"></polyline>
+                        </svg>
+                    </div>
+                    <h4>Business Hours</h4>
+                    <div class="hours-container vertical">
+                        <div class="day-wrapper">
+                            <div class="day-box open">S</div>
+                            <div class="day-label">Sunday: 10am - 5pm</div>
+                        </div>
+                        <div class="day-wrapper">
+                            <div class="day-box open">M</div>
+                            <div class="day-label">Monday: 10am - 5pm</div>
+                        </div>
+                        <div class="day-wrapper">
+                            <div class="day-box closed">T</div>
+                            <div class="day-label">Tuesday: Closed</div>
+                        </div>
+                        <div class="day-wrapper">
+                            <div class="day-box open">W</div>
+                            <div class="day-label">Wednesday: 10am - 5pm</div>
+                        </div>
+                        <div class="day-wrapper">
+                            <div class="day-box closed">T</div>
+                            <div class="day-label">Thursday: Closed</div>
+                        </div>
+                        <div class="day-wrapper">
+                            <div class="day-box open">F</div>
+                            <div class="day-label">Friday: 10am - 5pm</div>
+                        </div>
+                        <div class="day-wrapper">
+                            <div class="day-box open">S</div>
+                            <div class="day-label">Saturday: 10am - 5pm</div>
+                        </div>
+                    </div>
                 </div>
-                <h4>Business Hours</h4>
-                <p>Sunday • Monday<br> Wednesday • Friday<br> Saturday<br>10am - 5pm<br><br>Closed Tuesday<br>&
-                    Thursday
-                </p>
-            </div>
-            <div class="card fancy-border">
-                <div class="icon-box">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="feather feather-plus-square">
-                        <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
-                        <line x1="12" y1="8" x2="12" y2="16"></line>
-                        <line x1="8" y1="12" x2="16" y2="12"></line>
-                    </svg>
+                <div class="card fancy-border">
+                    <div class="icon-box">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="feather feather-plus-square">
+                            <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                            <line x1="12" y1="8" x2="12" y2="16"></line>
+                            <line x1="8" y1="12" x2="16" y2="12"></line>
+                        </svg>
+                    </div>
+                    <h4>Medical & Recreational</h4>
+                    <p>Serving both medical patients and recreational customers (21+).</p>
+                    <p>Got questions?<br>We've got answers!<br><a href="contact.html">Contact Us</a></p>
                 </div>
-                <h4>Medical & Rec</h4>
-                <p>Serving both medical patients and recreational customers (21+).</p>
-                <p>Got questions?<br>We've got answers!<br><a href="contact.html">Contact Us</a></p>
-            </div>
-            <div class="card fancy-border">
-                <div class="icon-box">
-                    <svg width="48" height="48" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-                        xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 499.8 499.8" xml:space="preserve"
-                        stroke="currentColor" fill="none" stroke-width="20">
-                        <path id="XMLID_277_" d="M477.16,292.045c0,0-62.848-4.221-125.061,22.069c11.664-13.634,23.084-28.804,33.416-45.603
+                <div class="card fancy-border">
+                    <div class="icon-box">
+                        <svg width="48" height="48" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                            xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 499.8 499.8" xml:space="preserve"
+                            stroke="currentColor" fill="none" stroke-width="20">
+                            <path id="XMLID_277_" d="M477.16,292.045c0,0-62.848-4.221-125.061,22.069c11.664-13.634,23.084-28.804,33.416-45.603
 	c51.428-83.723,56.047-174.385,56.047-174.385s-78.774,45.1-130.221,128.822c-7.563,12.3-13.99,24.738-19.668,37.029
 	c3.467-20.557,5.744-42.617,5.744-65.72C297.417,86.977,249.892,0,249.892,0s-47.506,86.977-47.506,194.259
 	c0,23.102,2.279,45.163,5.742,65.713c-5.68-12.293-12.123-24.723-19.67-37.023C137.017,139.227,58.238,94.127,58.238,94.127
@@ -149,31 +230,31 @@
 	c2.522-3.132,3.66-7.279,3.156-11.404l-10.852-86.814c12.967,9.103,36.426,23.225,65.875,30.441
 	c45.457,11.118,87.561,1.351,87.561,1.351s-31.564-27.798-77.002-38.909c-10.512-2.578-20.828-3.994-30.508-4.71
 	c20.504-3.117,44.42-8.744,68.238-18.881C439.173,339.374,477.16,292.045,477.16,292.045z" />
-                    </svg>
+                        </svg>
+                    </div>
+                    <h4>Premium Products</h4>
+                    <p>Discover the best selection: premium flower, potent concentrates, delicious edibles, and much
+                        more.<br><br>Don't miss our signature <a href="menu.html">Cutthroat Edibles</a>!
+                    </p>
                 </div>
-                <h4>Premium Products</h4>
-                <p>Discover the best selection: premium flower, potent concentrates, delicious edibles, and much
-                    more.<br><br>Don't miss our signature <a href="menu.html">Cutthroat Edibles</a>!
-                </p>
-            </div>
-            <div class="card fancy-border">
-                <div class="icon-box">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
-                        class="feather feather-smile">
-                        <circle cx="12" cy="12" r="10"></circle>
-                        <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
-                        <line x1="9" y1="9" x2="9.01" y2="9"></line>
-                        <line x1="15" y1="9" x2="15.01" y2="9"></line>
-                    </svg>
+                <div class="card fancy-border">
+                    <div class="icon-box">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                            class="feather feather-smile">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <path d="M8 14s1.5 2 4 2 4-2 4-2"></path>
+                            <line x1="9" y1="9" x2="9.01" y2="9"></line>
+                            <line x1="15" y1="9" x2="15.01" y2="9"></line>
+                        </svg>
+                    </div>
+                    <h4>Daily Specials</h4>
+                    <p>Save big today! Don't miss out on our exciting daily deals and exclusive loyalty rewards
+                        program.<br><br>Ask our budtenders for more info!
+                    </p>
                 </div>
-                <h4>Daily Specials</h4>
-                <p>Save big today! Don't miss out on our exciting daily deals and exclusive loyalty rewards
-                    program.<br><br>Ask our budtenders for more info!
-                </p>
             </div>
         </div>
-
     </section>
 
     <!-- What Makes Us Unique -->
@@ -235,8 +316,7 @@
                 <div>
                     <h3>A Historic Gold Rush Town</h3>
                     <p>Step back in time in one of the best-preserved gold rush towns in the West. From the boardwalks
-                        to
-                        the boot hill, Virginia City is a living history museum.</p>
+                        to Boot Hill, Virginia City is a living history museum.</p>
                     <p>Make your stop at the Virginia City Farmacy part of your full Virginia City experience.</p>
                     <a href="about.html" class="btn">Learn More</a>
                 </div>
@@ -262,7 +342,7 @@
                             in Montana. They have great flower that's grown in living soil and grown right. Their prices
                             are also very fair. I'm happy I found this spot and will be my go to place. Good selection
                             as well and also have a good selection of glass if you're into that sorta thing. I would
-                            definitely recommend trying some of their top flower. It's definitely worth it 🔥 🔥"</p>
+                            definitely recommend trying some of their top flower. It's definitely worth it!</p>
                         <p class="font-bold" style="margin-top: 1rem;">- Kyler</p>
                     </div>
                 </div>
@@ -297,7 +377,7 @@
                         style="font-family: var(--font-heading); font-size: 1.5rem; margin-bottom: 0.5rem; color: var(--color-gold);">
                         Virginia City Farmacy</h4>
                     <p style="font-size: 0.9rem; line-height: 1.4; margin-bottom: 1.5rem;">Premium cannabis in the heart
-                        of Virginia City, Montana. Good Vibes in the Old West.</p>
+                        of Virginia City, Montana.</p>
 
                     <div class="flex flex-col gap-md">
                         <a href="https://www.instagram.com/virginiacityfarmacy/" target="_blank"
@@ -342,8 +422,7 @@
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                             class="footer-icon">
                             <path
-                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
-                            </path>
+                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
                         </svg>
                         <p>(406) 843-5688</p>
                     </div>
@@ -361,17 +440,36 @@
                 </div>
                 <div class="footer-column">
                     <h4>Hours</h4>
-                    <div class="hours-container">
-                        <div class="day-box open">S</div>
-                        <div class="day-box open">M</div>
-                        <div class="day-box closed">T</div>
-                        <div class="day-box open">W</div>
-                        <div class="day-box closed">T</div>
-                        <div class="day-box open">F</div>
-                        <div class="day-box open">S</div>
+                    <div class="hours-container vertical">
+                        <div class="day-wrapper">
+                            <div class="day-box open">S</div>
+                            <div class="day-label">Sunday: 10am - 5pm</div>
+                        </div>
+                        <div class="day-wrapper">
+                            <div class="day-box open">M</div>
+                            <div class="day-label">Monday: 10am - 5pm</div>
+                        </div>
+                        <div class="day-wrapper">
+                            <div class="day-box closed">T</div>
+                            <div class="day-label">Tuesday: Closed</div>
+                        </div>
+                        <div class="day-wrapper">
+                            <div class="day-box open">W</div>
+                            <div class="day-label">Wednesday: 10am - 5pm</div>
+                        </div>
+                        <div class="day-wrapper">
+                            <div class="day-box closed">T</div>
+                            <div class="day-label">Thursday: Closed</div>
+                        </div>
+                        <div class="day-wrapper">
+                            <div class="day-box open">F</div>
+                            <div class="day-label">Friday: 10am - 5pm</div>
+                        </div>
+                        <div class="day-wrapper">
+                            <div class="day-box open">S</div>
+                            <div class="day-label">Saturday: 10am - 5pm</div>
+                        </div>
                     </div>
-                    <p class="text-gold" style="margin-top: 1rem; font-size: 1rem;">Open Days: 10am - 5pm</p>
-                    <p style="color: #999; margin-top: 0.25rem; font-size: 1rem;">Closed Tuesdays & Thursdays</p>
                 </div>
             </div>
             <div class="text-center" style="margin-top: 3rem; padding-top: 1rem;">
