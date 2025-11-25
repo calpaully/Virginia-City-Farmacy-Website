@@ -1,44 +1,22 @@
 <?php
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+require 'PHPMailer/src/Exception.php';
+require 'PHPMailer/src/PHPMailer.php';
+require 'PHPMailer/src/SMTP.php';
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-
-    // --- CONFIGURATION ---
-    $recipient_email = "brantleycreative@gmail.com"; 
-    $sender_email    = "no-reply@virginiacityfarmacy.com"; 
     
-    // RECAPTCHA SECRET KEY (Get this from Google Admin Console)
-    $recaptcha_secret = "6LcWIxYsAAAAAMrJh187Lq-4r_ege4FLtBqn70J9"; 
-    // ---------------------
+    // CONFIGURATION
+    // Recipient email address
+    $recipient_email = "vcfarmacy@gmail.com"; 
+    
+    // This should be an email address on your domain to avoid spam filters
+    $sender_email = "noreply@virginiacityfarmacy.com"; 
 
-    // 1. CHECK RECAPTCHA
-    if (isset($_POST['g-recaptcha-response']) && !empty($_POST['g-recaptcha-response'])) {
-        
-        $verify_url = "https://www.google.com/recaptcha/api/siteverify";
-        $data = [
-            'secret' => $recaptcha_secret,
-            'response' => $_POST['g-recaptcha-response']
-        ];
-
-        $ch = curl_init();
-        curl_setopt($ch, CURLOPT_URL, $verify_url);
-        curl_setopt($ch, CURLOPT_POST, true);
-        curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query($data));
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        $response = curl_exec($ch);
-        curl_close($ch);
-
-        $response_data = json_decode($response);
-
-        if (!$response_data->success) {
-            die("reCAPTCHA verification failed. Please try again.");
-        }
-    } else {
-        die("Please check the captcha box.");
-    }
-
-    // 2. SANITIZE DATA
+    // 1. SANITIZE INPUTS
     $name = strip_tags(trim($_POST["name"]));
-    // SECURITY PATCH: Remove newlines to prevent Header Injection attacks
-    $name = str_replace(array("\r","\n"), array(" "," "), $name);
     
     $business_name = "";
     if (isset($_POST["business_name"])) {
@@ -60,32 +38,52 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         exit;
     }
 
-    // 4. PREPARE EMAIL
-    $subject = "New Contact: $name";
+    // 4. PREPARE EMAIL CONTENT
+    $subject = "VCFarmacy Form Submission from $name";
     
     $email_content = "Name: $name\n";
     if (!empty($business_name)) {
         $email_content .= "Business Name: $business_name\n";
     }
     $email_content .= "Email: $email\n";
-    $email_content .= "Phone: $phone\n\n"; // Added Phone here
+    $email_content .= "Phone: $phone\n\n";
     $email_content .= "Message:\n$message\n";
 
-    // Headers
-    $headers = "From: $sender_email\r\n";
-    // This line ensures the 'Reply-To' is the user's email address
-    $headers .= "Reply-To: $email\r\n"; 
-    $headers .= "X-Mailer: PHP/" . phpversion();
+    // 5. SEND EMAIL USING PHPMAILER
+    $mail = new PHPMailer(true);
 
-    // 5. SEND AND REDIRECT
-    if (mail($recipient_email, $subject, $email_content, $headers)) {
+    try {
+        // Server settings
+        // To use SMTP, uncomment the lines below and fill in your SMTP details
+        /*
+        $mail->isSMTP();                                            
+        $mail->Host       = 'smtp.example.com';                     
+        $mail->SMTPAuth   = true;                                   
+        $mail->Username   = 'user@example.com';                     
+        $mail->Password   = 'secret';                               
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;         
+        $mail->Port       = 587;                                    
+        */
+
+        // Recipients
+        $mail->setFrom($sender_email, 'Virginia City Farmacy Website');
+        $mail->addAddress($recipient_email);     
+        $mail->addReplyTo($email, $name);
+
+        // Content
+        $mail->isHTML(false);                                  
+        $mail->Subject = $subject;
+        $mail->Body    = $email_content;
+
+        $mail->send();
         header("Location: thank-you.html");
         exit;
-    } else {
-        echo "<h1>Error</h1><p>The server could not send the email.</p>";
+    } catch (Exception $e) {
+        echo "<h1>Error</h1><p>The server could not send the email. Mailer Error: {$mail->ErrorInfo}</p>";
     }
 
 } else {
+    // Redirect back to contact page if accessed directly
     header("Location: contact.html");
     exit;
 }
