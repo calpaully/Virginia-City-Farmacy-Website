@@ -10,7 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
     // CONFIGURATION
     // Recipient email address
-    $recipient_email = "brantleycreative@gmail.com"; 
+    $recipient_email = "vcfarmacy@gmail.com"; 
     
     // This should be an email address on your domain to avoid spam filters
     $sender_email = "noreply@virginiacityfarmacy.com"; 
