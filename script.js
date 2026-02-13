@@ -147,4 +147,15 @@ document.addEventListener('DOMContentLoaded', function() {
             nextTestimonialBtn.addEventListener('click', nextTestimonial);
         }
     }
+
+    // Dynamic Copyright Year
+    function updateCopyrightYear() {
+        const yearSpans = document.querySelectorAll('.js-copyright-year');
+        const currentYear = new Date().getFullYear();
+        yearSpans.forEach(span => {
+            span.textContent = currentYear;
+        });
+    }
+    
+    updateCopyrightYear();
 });
