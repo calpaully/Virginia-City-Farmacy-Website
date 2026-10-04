@@ -644,6 +644,58 @@ p {
     letter-spacing: 0.05em;
 }
 
+/* Menu page: Virginia City / Ennis menu toggle (sits in the page header) */
+.menu-toggle {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-lg);
+}
+
+.menu-toggle-btn {
+    cursor: pointer;
+    min-width: 13rem;
+    font-size: 1.1rem;
+    letter-spacing: 0.05em;
+}
+
+/* Selected button: filled gold with white text */
+.menu-toggle-btn.is-active {
+    color: var(--color-white);
+}
+
+/* Unselected button: dark with a gold edge and gold text, so the selected (filled gold) button stands out */
+.menu-toggle-btn:not(.is-active) {
+    background-color: rgba(0, 0, 0, 0.55);
+    color: var(--color-gold);
+    border-color: var(--color-gold);
+    box-shadow: none;
+}
+
+.menu-toggle-btn:not(.is-active):hover {
+    background-color: rgba(176, 139, 91, 0.35);
+}
+
+.menu-toggle-btn:focus-visible {
+    outline: 3px solid var(--color-white);
+    outline-offset: 3px;
+}
+
+/* Heading above the embedded menu: says which menu is showing */
+.menu-heading {
+    text-align: center;
+    margin-bottom: var(--spacing-lg);
+}
+
+/* Location page: on mobile, stack the Google Maps button above the address and phone instead of beside them */
+@media (max-width: 768px) {
+    .location-contact {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
 /* ========================================
    6. New Hero Component Styles
    ========================================
