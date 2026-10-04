@@ -16,22 +16,94 @@
     </script>
 
     <meta name="description"
-        content="Visit Virginia City Farmacy at 120 W Wallace St. Open daily for recreational and medical cannabis. Get directions and store hours for your visit to historic Virginia City.">
+        content="Visit Virginia City Farmacy in Virginia City (120 W Wallace St) or our new Ennis shop (59 MT-287). Recreational and medical cannabis. Get directions and hours.">
     <meta name="keywords"
-        content="dispensary directions, Virginia City dispensary hours, cannabis store location, marijuana near Ennis MT">
+        content="dispensary directions, Virginia City dispensary hours, Ennis dispensary hours, cannabis store locations, marijuana near Ennis MT">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://virginiacityfarmacy.com/location.html">
     <meta property="og:title"
-        content="Location & Hours | Virginia City Farmacy | Dispensary Near Dillon, Ennis & Sheridan">
+        content="Locations & Hours | Virginia City Farmacy | Dispensary Near Dillon, Ennis & Sheridan">
     <meta property="og:description"
-        content="Visit Virginia City Farmacy at 120 W Wallace St. Open daily for recreational and medical cannabis. Get directions and store hours for your visit to historic Virginia City.">
+        content="Visit Virginia City Farmacy in Virginia City (120 W Wallace St) or our new Ennis shop (59 MT-287). Recreational and medical cannabis. Get directions and hours.">
     <meta property="og:image" content="https://virginiacityfarmacy.com/images/dispensary-exterior-nofx-800.jpg">
 
     <link rel="canonical" href="https://virginiacityfarmacy.com/location.html">
 
-    <title>Location & Hours | Virginia City Farmacy | Dispensary Near Dillon, Ennis & Sheridan</title>
+    <!-- Structured data: both shops -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://virginiacityfarmacy.com/#organization",
+          "name": "Virginia City Farmacy",
+          "url": "https://virginiacityfarmacy.com/",
+          "logo": "https://virginiacityfarmacy.com/images/virginia-city-farmacy-logo-800px_nobg.png",
+          "sameAs": [
+            "https://www.instagram.com/virginiacityfarmacy/",
+            "https://www.facebook.com/Virginiacityfarmacy"
+          ]
+        },
+        {
+          "@type": "Store",
+          "@id": "https://virginiacityfarmacy.com/#virginia-city",
+          "name": "Virginia City Farmacy",
+          "description": "Premium cannabis dispensary (recreational and medical) in historic Virginia City, Montana.",
+          "url": "https://virginiacityfarmacy.com/location.html",
+          "telephone": "+1-406-843-5688",
+          "image": "https://virginiacityfarmacy.com/images/dispensary-exterior-nofx-800.jpg",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "120 W Wallace St",
+            "addressLocality": "Virginia City",
+            "addressRegion": "MT",
+            "postalCode": "59755",
+            "addressCountry": "US"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 45.293466,
+            "longitude": -111.945868
+          },
+          "hasMap": "https://maps.app.goo.gl/vBpnoYLeLJhsMgKC8",
+          "parentOrganization": {
+            "@id": "https://virginiacityfarmacy.com/#organization"
+          }
+        },
+        {
+          "@type": "Store",
+          "@id": "https://virginiacityfarmacy.com/#ennis",
+          "name": "Virginia City Farmacy - Ennis",
+          "description": "Premium cannabis dispensary (recreational and medical) featuring The Coffee Joint in Ennis, Montana.",
+          "url": "https://virginiacityfarmacy.com/location.html",
+          "telephone": "+1-406-682-4990",
+          "image": "https://virginiacityfarmacy.com/images/slider2b-med.jpg",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "59 MT-287, Unit C",
+            "addressLocality": "Ennis",
+            "addressRegion": "MT",
+            "postalCode": "59729",
+            "addressCountry": "US"
+          },
+          "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 45.3469002,
+            "longitude": -111.7403967
+          },
+          "hasMap": "https://maps.app.goo.gl/cjwBsP7dwMNXQX5Z8",
+          "parentOrganization": {
+            "@id": "https://virginiacityfarmacy.com/#organization"
+          }
+        }
+      ]
+    }
+    </script>
+
+    <title>Locations & Hours | Virginia City Farmacy | Dispensary Near Dillon, Ennis & Sheridan</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -47,7 +119,7 @@
     <meta name="apple-mobile-web-app-title" content="VC Farmacy" />
     <link rel="manifest" href="/site.webmanifest" />
 
-    <link rel="stylesheet" href="styles.css?v=3">
+    <link rel="stylesheet" href="styles.css?v=4">
 </head>
 
 <body>
@@ -63,9 +135,9 @@
 
             <nav class="desktop-nav">
                 <ul class="flex gap-lg items-center">
-                    <li><a href="menu.html" class="nav-link">Menu</a></li>
+                    <li><a href="menu.html" class="nav-link">Menus</a></li>
                     <li><a href="about.html" class="nav-link">About Us / History</a></li>
-                    <li><a href="location.html" class="nav-link" style="color: var(--color-gold);">Location & Info</a>
+                    <li><a href="location.html" class="nav-link" style="color: var(--color-gold);">Locations & Info</a>
                     </li>
                     <li><a href="wholesale.html" class="nav-link">Wholesale</a></li>
                     <li><a href="contact.html" class="nav-link">Contact Us</a></li>
@@ -102,9 +174,9 @@
                     </path>
                 </svg>
             </button>
-            <a href="menu.html">Menu</a>
+            <a href="menu.html">Menus</a>
             <a href="about.html">About Us / History</a>
-            <a href="location.html">Location & Info</a>
+            <a href="location.html">Locations & Info</a>
             <a href="wholesale.html">Wholesale</a>
             <a href="contact.html">Contact Us</a>
             <div class="flex gap-md justify-center" style="margin-top: 2rem;">
@@ -127,22 +199,23 @@
     <div class="page-header text-center page-header-bg section"
         style="background-image: url('images/dispensary-interior-wide-angle-bright.jpg');">
         <div class="container">
-            <h1 class="text-white">Location & Visitor Info</h1>
-            <p class="text-white">Find us in the heart of historic Virginia City, Montana</p>
+            <h1 class="text-white" style="font-size: clamp(2.25rem, 11.5vw, 3.5rem);">Locations & Visitor Info</h1>
+            <p class="text-white">Two shops in Virginia City and Ennis, Montana</p>
         </div>
     </div>
 
     <!-- Map & Directions -->
     <section class="section">
         <div class="container grid grid-2 gap-lg">
+            <div class="text-center" style="grid-column: 1 / -1;">
+                <h2>Our Virginia City Shop</h2>
+            </div>
             <div>
                 <h3>How to Find Us</h3>
-                <div class="flex items-center gap-md" style="margin-bottom: 1rem;">
-                    <a href="https://maps.app.goo.gl/wac6x21FMPVgdXs39" class="btn" target="_blank">Open in
-                        Google
-                        Maps</a>
+                <div class="flex items-center gap-md location-contact" style="margin-bottom: 1rem;">
+                    <a href="https://maps.app.goo.gl/wac6x21FMPVgdXs39" class="btn" target="_blank">Open Google Maps</a>
                     <div>
-                        <strong>Address:</strong><br>120 W Wallace St<br>Virginia City, MT 59755
+                        120 W Wallace St<br>Virginia City, MT 59755<br><span style="white-space: nowrap;">(406) 843-5688</span>
                     </div>
                 </div>
                 <p>We are located right on the main boardwalk, across from the historic Opera House. We are
@@ -150,12 +223,43 @@
                     located near Dillon, Ennis, and Sheridan.</p>
 
                 <h3 style="margin-top: 2rem;">Hours</h3>
-                <p>Hours Vary Seasonally. For current hours, check our Google Maps listing.</p>
+                <p>Hours vary seasonally. For current hours, check our Google Maps listing.</p>
                 <a href="https://maps.app.goo.gl/vBpnoYLeLJhsMgKC8" target="_blank" class="btn">OPEN GOOGLE MAPS</a>
             </div>
             <div>
                 <iframe
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2806.7478563604127!2d-111.94768432385855!3d45.29331667107173!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x53507fed0d997c65%3A0xd19aa0f800516223!2sVirginia%20City%20Farmacy%20LLC!5e0!3m2!1sen!2sus!4v1763966937321!5m2!1sen!2sus"
+                    width="100%" height="450"
+                    style="border:0; border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);"
+                    allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map & Directions: Ennis -->
+    <section class="section" style="border-top: 4px solid var(--color-gold);">
+        <div class="container grid grid-2 gap-lg">
+            <div class="text-center" style="grid-column: 1 / -1;">
+                <h2>Our Ennis Shop</h2>
+            </div>
+            <div>
+                <h3>How to Find Us</h3>
+                <div class="flex items-center gap-md location-contact" style="margin-bottom: 1rem;">
+                    <a href="https://maps.app.goo.gl/cjwBsP7dwMNXQX5Z8" class="btn" target="_blank">Open Google Maps</a>
+                    <div>
+                        59 MT-287, Unit C<br>Ennis, MT 59729<br><span style="white-space: nowrap;">(406) 682-4990</span>
+                    </div>
+                </div>
+                <p>We are located right on Highway 287 in Ennis. Stop in for premium cannabis and a fresh cup from
+                    The Coffee Joint, our in-shop coffee bar.</p>
+
+                <h3 style="margin-top: 2rem;">Hours</h3>
+                <p>Hours vary seasonally. For current hours, check our Google Maps listing.</p>
+                <a href="https://maps.app.goo.gl/cjwBsP7dwMNXQX5Z8" target="_blank" class="btn">OPEN GOOGLE MAPS</a>
+            </div>
+            <div>
+                <iframe title="Map showing Virginia City Farmacy in Ennis, Montana"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2806.7478563604127!2d-111.7403967!3d45.3469002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x535a9d001c249519%3A0xa8c1e47f12804dae!2sVirginia%20City%20Farmacy%20featuring%20The%20Coffee%20Joint!5e0!3m2!1sen!2sus!4v1763966937321!5m2!1sen!2sus"
                     width="100%" height="450"
                     style="border:0; border-radius: 8px; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);"
                     allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -223,11 +327,7 @@
                     <h4
                         style="font-family: var(--font-heading); font-size: 1.5rem; margin-bottom: 0.5rem; color: var(--color-gold);">
                         Virginia City Farmacy</h4>
-                    <p style="font-size: 0.9rem; line-height: 1.4; margin-bottom: 1.5rem;">Premium cannabis
-                        in
-                        the
-                        heart
-                        of Virginia City, Montana.</p>
+                    <p style="font-size: 0.9rem; line-height: 1.4; margin-bottom: 1.5rem;">Premium Cannabis in Virginia City &amp; Ennis, Montana</p>
 
                     <div class="flex flex-col gap-md">
                         <a href="https://www.instagram.com/virginiacityfarmacy/" target="_blank"
@@ -262,7 +362,7 @@
                             <circle cx="12" cy="10" r="3"></circle>
                         </svg>
                         <div>
-                            <p style="margin-bottom: 0.5rem;">120 W Wallace St<br>Virginia City, MT 59755</p>
+                            <p style="margin-bottom: 0.5rem;">120 W Wallace St<br>Virginia City, MT 59755<br>(406) 843-5688</p>
                             <a href="https://maps.app.goo.gl/vBpnoYLeLJhsMgKC8" target="_blank"
                                 class="footer-link contact-link-underline" style="font-size: 0.9rem; margin-top: 0;">Get
                                 Directions</a>
@@ -272,10 +372,15 @@
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
                             class="footer-icon">
-                            <path
-                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
                         </svg>
-                        <p>(406) 843-5688</p>
+                        <div>
+                            <p style="margin-bottom: 0.5rem;">59 MT-287, Unit C<br>Ennis, MT 59729<br>(406) 682-4990</p>
+                            <a href="https://maps.app.goo.gl/cjwBsP7dwMNXQX5Z8" target="_blank"
+                                class="footer-link contact-link-underline" style="font-size: 0.9rem; margin-top: 0;">Get
+                                Directions</a>
+                        </div>
                     </div>
                     <div class="contact-row">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -294,8 +399,8 @@
                     <div class="hours-container vertical">
                         <p style="margin-bottom: 1rem;">Hours Vary Seasonally. For current hours, check our Google Maps
                             listing.</p>
-                        <a href="https://maps.app.goo.gl/vBpnoYLeLJhsMgKC8" target="_blank" class="btn">OPEN GOOGLE
-                            MAPS</a>
+                        <a href="https://maps.app.goo.gl/vBpnoYLeLJhsMgKC8" target="_blank" class="btn">Virginia City Hours</a>
+                        <a href="https://maps.app.goo.gl/cjwBsP7dwMNXQX5Z8" target="_blank" class="btn">Ennis Hours</a>
                     </div>
                 </div>
             </div>
