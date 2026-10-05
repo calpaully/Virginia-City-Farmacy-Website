@@ -33,6 +33,9 @@ export default {
 const redirect = (url, path) =>
   new Response(null, { status: 303, headers: { location: new URL(path, url).toString(), 'cache-control': 'no-store' } });
 
+// One line per submission saying what happened to it. Never logs names, emails, phone numbers or messages.
+const log = (form, outcome) => console.log(JSON.stringify({ event: 'contact_form', form, outcome }));
+
 async function handleContact(request, env, url) {
   // Only accept posts that come from this site's own pages.
   const origin = request.headers.get('origin');
@@ -43,22 +46,33 @@ async function handleContact(request, env, url) {
     } catch {
       sameSite = false;
     }
-    if (!sameSite) return new Response('Forbidden.', { status: 403 });
+    if (!sameSite) {
+      log('unknown', 'forbidden_origin');
+      return new Response('Forbidden.', { status: 403 });
+    }
   }
 
   let form;
   try {
     form = await request.formData();
   } catch {
+    log('unknown', 'unreadable_form');
     return new Response('The form data could not be read.', { status: 400 });
   }
 
   const field = (name) => String(form.get(name) ?? '').trim();
-  const kind = field('form') in FORMS ? field('form') : 'contact';
+  const kind = Object.hasOwn(FORMS, field('form')) ? field('form') : 'contact';
   const back = (code) => redirect(url, `${FORMS[kind].page}?error=${code}`);
+  const invalid = (reason) => {
+    log(kind, `invalid:${reason}`);
+    return back('invalid');
+  };
 
   // Honeypot: real visitors never see this field. Bots that fill it get a normal-looking success.
-  if (field('website')) return redirect(url, '/thank-you');
+  if (field('website')) {
+    log(kind, 'honeypot');
+    return redirect(url, '/thank-you');
+  }
 
   const name = field('name');
   const businessName = field('business_name');
@@ -66,22 +80,27 @@ async function handleContact(request, env, url) {
   const phone = field('phone');
   const message = field('message');
 
-  if (!name || name.length > 200) return back('invalid');
-  if (businessName.length > 200) return back('invalid');
-  if (!EMAIL_PATTERN.test(email) || email.length > 254) return back('invalid');
-  if (!phone || phone.length > 50) return back('invalid');
-  if (!message || message.length > 5000) return back('invalid');
+  if (!name || name.length > 200) return invalid('name');
+  if (businessName.length > 200) return invalid('business_name');
+  if (!EMAIL_PATTERN.test(email) || email.length > 254) return invalid('email');
+  if (!phone || phone.length > 50) return invalid('phone');
+  if (!message || message.length > 5000) return invalid('message');
 
-  if (!(await verifyTurnstile(field('cf-turnstile-response'), request, env))) return back('spam');
+  if (!(await verifyTurnstile(field('cf-turnstile-response'), request, env))) {
+    log(kind, 'turnstile_failed');
+    return back('spam');
+  }
 
   try {
     const raw = buildEmail({ from: env.CONTACT_FROM, to: env.CONTACT_TO, kind, name, businessName, email, phone, message });
     await env.CONTACT_EMAIL.send(new EmailMessage(env.CONTACT_FROM, env.CONTACT_TO, raw));
   } catch (err) {
     console.error('Contact email failed:', err);
+    log(kind, 'send_failed');
     return back('send');
   }
 
+  log(kind, 'sent');
   return redirect(url, '/thank-you');
 }
 
