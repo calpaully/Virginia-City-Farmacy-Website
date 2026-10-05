@@ -146,8 +146,12 @@
             </div>
             <div class="card fancy-border">
                 <h3>Wholesale Partner Inquiry</h3>
-                <form id="wholesaleForm" action="process-form.php" method="POST"
+                <div id="formError" role="alert" hidden
+                    style="margin-top: 1rem; padding: 0.75rem 1rem; border: 2px solid #b00020; border-radius: var(--radius-sm); background: #fdecea; color: #7a0010; text-align: left;">
+                </div>
+                <form id="wholesaleForm" action="/api/contact" method="POST"
                     style="margin-top: 1.5rem; text-align: left;">
+                    <input type="hidden" name="form" value="wholesale">
                     <div style="margin-bottom: 1rem;">
                         <label for="name" style="display: block; margin-bottom: 0.5rem; font-weight: 700;">Name
                             *</label>
@@ -177,6 +181,10 @@
                             *</label>
                         <textarea id="message" name="message" rows="5" required
                             style="width: 100%; padding: 0.75rem; border: 1px solid #ccc; border-radius: var(--radius-sm);"></textarea>
+                    </div>
+                    <div style="position: absolute; left: -9999px;" aria-hidden="true">
+                        <label for="website">Leave this field empty</label>
+                        <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
                     </div>
                     <div class="cf-turnstile" data-sitekey="0x4AAAAAACCj8Xn5c46UxeCH"></div>
                     <button type="submit" class="btn" style="width: 100%; font-size: 1.5rem;">Send Message</button>
@@ -279,6 +287,8 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+    <script src="contact-form.js?v=1"></script>
 </body>
 
 </html>

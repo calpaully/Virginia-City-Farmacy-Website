@@ -1,0 +1,22 @@
+{
+  "name": "vcfarmacy-contact",
+  "main": "index.js",
+  "compatibility_date": "2026-03-11",
+  // Only reachable through the site's own domain. The site itself stays on Cloudflare Pages.
+  "workers_dev": false,
+  "routes": [
+    { "pattern": "virginiacityfarmacy.com/api/*", "zone_name": "virginiacityfarmacy.com" },
+    { "pattern": "www.virginiacityfarmacy.com/api/*", "zone_name": "virginiacityfarmacy.com" }
+  ],
+  // Email Routing must be enabled on virginiacityfarmacy.com, and this address must be a
+  // verified destination in Email Routing. The binding can only ever send to this one address.
+  "send_email": [{ "name": "CONTACT_EMAIL", "destination_address": "vcfarmacy@gmail.com" }],
+  "vars": {
+    // Sender shown on the notification. Any address @virginiacityfarmacy.com works.
+    "CONTACT_FROM": "website@virginiacityfarmacy.com",
+    // Where form messages go.
+    "CONTACT_TO": "vcfarmacy@gmail.com"
+  }
+  // TURNSTILE_SECRET is a secret, not a var. From this folder: npx wrangler secret put TURNSTILE_SECRET
+  // (use the secret of the "Virginia City Farmacy" widget).
+}
