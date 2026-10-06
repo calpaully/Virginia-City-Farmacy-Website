@@ -4,6 +4,8 @@
   "compatibility_date": "2026-03-11",
   // Only reachable through the site's own domain. The site itself stays on Cloudflare Pages.
   "workers_dev": false,
+  // Keep logs in the dashboard: Workers & Pages > vcfarmacy-contact > Observability.
+  "observability": { "enabled": true },
   "routes": [
     { "pattern": "virginiacityfarmacy.com/api/*", "zone_name": "virginiacityfarmacy.com" },
     { "pattern": "www.virginiacityfarmacy.com/api/*", "zone_name": "virginiacityfarmacy.com" }
